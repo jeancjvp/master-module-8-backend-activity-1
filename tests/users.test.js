@@ -22,7 +22,7 @@ describe(' POST /api/users', () => {
 
 describe(' PATCH /api/users/:id/activate', () => {
 	
-	test('should respond with a 200 status code', async () => {
+	test('should respond with a 200 status code header', async () => {
 		const response = await request(app).patch('/api/users/' + id + '/activate').send();
 		expect(response.statusCode).toBe(200);
 	});
